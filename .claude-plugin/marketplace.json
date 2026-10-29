@@ -4,14 +4,14 @@
     "name": "Ivanna Kaceviča",
     "url": "https://happycode.studio"
   },
-  "description": "AI agent skills for Claude Code, Codex, Cursor, and other coding agents: agent loop design and Claude prompt cache diagnostics.",
+  "description": "AI agent skills for Claude Code, Codex, Cursor, and other coding agents: agent loop design, AI scope QA, and Claude prompt cache diagnostics.",
   "version": "1.0.0",
   "plugins": [
     {
       "name": "ai-agent-skills",
       "source": "./",
       "displayName": "AI Agent Skills",
-      "description": "Agent loop design and Claude prompt cache diagnostics.",
+      "description": "Agent loops, AI scope QA, and prompt cache diagnostics.",
       "version": "1.0.0",
       "author": {
         "name": "Ivanna Kaceviča",

@@ -2,7 +2,7 @@
   "name": "ai-agent-skills",
   "displayName": "AI Agent Skills",
   "version": "1.0.0",
-  "description": "Agent loop design and Claude prompt cache diagnostics.",
+  "description": "Agent loops, AI scope QA, and prompt cache diagnostics.",
   "author": {
     "name": "Ivanna Kaceviča",
     "url": "https://happycode.studio"

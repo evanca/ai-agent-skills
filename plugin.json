@@ -1,5 +1,5 @@
 {
   "$schema": "https://antigravity.google/schemas/v1/plugin.json",
   "name": "ai-agent-skills",
-  "description": "Agent loop design and Claude prompt cache diagnostics."
+  "description": "Agent loops, AI scope QA, and prompt cache diagnostics."
 }

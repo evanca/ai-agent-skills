@@ -15,6 +15,13 @@
       "skills": [
         "cache-diagnostics"
       ]
+    },
+    {
+      "title": "AI evaluation",
+      "description": "Testing app AI scope boundaries, false refusals, topic drift, and prompt injection.",
+      "skills": [
+        "ai-scope-qa"
+      ]
     }
   ]
 }

@@ -4,13 +4,13 @@
     "name": "Ivanna Kaceviča"
   },
   "metadata": {
-    "description": "AI agent skills for Claude Code, Codex, Cursor, and other coding agents: agent loop design and Claude prompt cache diagnostics."
+    "description": "AI agent skills for Claude Code, Codex, Cursor, and other coding agents: agent loop design, AI scope QA, and Claude prompt cache diagnostics."
   },
   "plugins": [
     {
       "name": "ai-agent-skills",
       "source": ".",
-      "description": "Agent loop design and Claude prompt cache diagnostics."
+      "description": "Agent loops, AI scope QA, and prompt cache diagnostics."
     }
   ]
 }
