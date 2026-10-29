@@ -1,0 +1,29 @@
+{
+  "name": "ai-agent-skills",
+  "version": "1.0.0",
+  "description": "Agent loop design and Claude prompt cache diagnostics.",
+  "author": {
+    "name": "Ivanna Kaceviča",
+    "url": "https://happycode.studio"
+  },
+  "homepage": "https://github.com/evanca/ai-agent-skills",
+  "repository": "https://github.com/evanca/ai-agent-skills",
+  "license": "MIT",
+  "keywords": [
+    "agent-skills",
+    "agent-loops",
+    "automation",
+    "claude-api",
+    "prompt-caching",
+    "claude-code",
+    "codex"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "AI Agent Skills",
+    "shortDescription": "Agent loop design and Claude prompt cache diagnostics.",
+    "longDescription": "Design agent loops with explicit triggers, verification, and stop conditions, then bind them to Claude Code, the Claude Agent SDK, Codex CLI, or OpenClaw. Diagnose Claude prompt cache misses with the cache diagnostics beta and a bundled probe script.",
+    "developerName": "Ivanna Kaceviča",
+    "websiteURL": "https://happycode.studio"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "ai-agent-skills",
+  "displayName": "AI Agent Skills",
+  "version": "1.0.0",
+  "description": "Agent loop design and Claude prompt cache diagnostics.",
+  "author": {
+    "name": "Ivanna Kaceviča"
+  },
+  "publisher": "evanca",
+  "homepage": "https://github.com/evanca/ai-agent-skills",
+  "repository": "https://github.com/evanca/ai-agent-skills",
+  "license": "MIT",
+  "keywords": [
+    "agent-skills",
+    "agent-loops",
+    "automation",
+    "claude-api",
+    "prompt-caching",
+    "claude-code",
+    "codex"
+  ],
+  "category": "developer-tools",
+  "tags": [
+    "agent-skills",
+    "agent-loops",
+    "prompt-caching",
+    "automation"
+  ],
+  "skills": "./skills/"
+}
