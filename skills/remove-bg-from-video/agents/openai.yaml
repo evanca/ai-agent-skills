@@ -1,0 +1,3 @@
+interface:
+  display_name: "Remove Background from Video"
+  short_description: "Clean video cutouts with stable subject edges"
