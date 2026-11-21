@@ -1,6 +1,6 @@
 # AI Agent Skills for Claude Code, Codex, Cursor, Antigravity, and Other AI Coding Agents
 
-**Agent skills your coding agent loads by itself: design agent loops that stop when they should, test an app AI's scope boundaries, and find out why a Claude prompt cache keeps missing.**
+**Agent skills your coding agent loads by itself: design agent loops that stop when they should, test an app AI's scope boundaries, find out why a Claude prompt cache keeps missing, and remove video backgrounds while preserving subject edges.**
 
 A skill is a folder with a `SKILL.md` file. Your agent reads the description, decides a task matches, and pulls in the guidance. You don't paste anything into a rules file or remember to `@`-mention a doc.
 
@@ -32,7 +32,7 @@ This repo is also a plugin marketplace, so agents that support plugins can insta
 /plugin install ai-agent-skills@ai-agent-skills
 ```
 
-Skills then load as `ai-agent-skills:loop-designer`, `ai-agent-skills:cache-diagnostics`, and `ai-agent-skills:ai-scope-qa`.
+Skills then load as `ai-agent-skills:loop-designer`, `ai-agent-skills:cache-diagnostics`, `ai-agent-skills:ai-scope-qa`, and `ai-agent-skills:remove-bg-from-video`.
 
 **Codex** — [plugins](https://developers.openai.com/codex/plugins/build):
 
@@ -65,6 +65,7 @@ Prefer to do it by hand? Copy or symlink any skill folder into your agent's skil
 | [`loop-designer`](./skills/loop-designer) | Automating a recurring task, building a retry-until-green loop, or debugging a loop that stalls or burns tokens |
 | [`cache-diagnostics`](./skills/cache-diagnostics) | Finding out why a Claude prompt cache keeps missing or a turn costs more than expected |
 | [`ai-scope-qa`](./skills/ai-scope-qa) | Testing an app AI's scope boundaries, false refusals, topic drift, or prompt injection |
+| [`remove-bg-from-video`](./skills/remove-bg-from-video) | Removing or replacing a video background, exporting alpha/chroma-key footage, or correcting halos and missing subject edges |
 
 ### loop-designer
 
@@ -96,6 +97,10 @@ Install `anthropic` and set credentials first: `ANTHROPIC_API_KEY`, or an `ant a
 Builds contextual conversation tests for an app's AI: legitimate tasks, ambiguous requests, ordinary off-topic input, and deliberate prompt injection. It checks false refusals alongside missed refusals and separates response wording from effects on state, access, quota, and stored data.
 
 Includes a [prompt checklist](./skills/ai-scope-qa/references/prompt-checklist.md), [case design and evaluation guidance](./skills/ai-scope-qa/references/case-design.md), and [primary references](./skills/ai-scope-qa/references/sources.md). Expectations come from the app's own policy and supported actions.
+
+### remove-bg-from-video
+
+Guides source inspection, stable masking and tracking, HDR-to-SDR proofing, and alpha/chroma-key delivery. Includes a [rigid-object and colored-glove reference](./skills/remove-bg-from-video/references/rigid-object-and-gloves.md), with source-specific calibration and sampled-verification limits.
 
 ## 📚 Sources and credits
 
