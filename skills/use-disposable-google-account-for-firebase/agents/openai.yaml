@@ -1,0 +1,4 @@
+interface:
+  display_name: "Disposable Google Account for Firebase"
+  short_description: "Run Firebase AI Logic with App Check on a lab project"
+  default_prompt: "Use $use-disposable-google-account-for-firebase to set up this temporary Google account's project and get a Firebase AI Logic hello world working with App Check."

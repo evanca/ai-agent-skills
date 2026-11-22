@@ -22,6 +22,13 @@
       "skills": [
         "ai-scope-qa"
       ]
+    },
+    {
+      "title": "Firebase",
+      "description": "Testing Firebase AI Logic and App Check on temporary, disposable or lab Google accounts.",
+      "skills": [
+        "use-disposable-google-account-for-firebase"
+      ]
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "name": "ai-agent-skills",
   "version": "1.0.0",
-  "description": "Agent loops, AI scope QA, and prompt cache diagnostics.",
+  "description": "Agent loops, AI scope QA, prompt cache diagnostics, and Firebase on disposable Google accounts.",
   "author": {
     "name": "Ivanna Kaceviča",
     "url": "https://happycode.studio"
@@ -16,13 +16,14 @@
     "claude-api",
     "prompt-caching",
     "claude-code",
-    "codex"
+    "codex",
+    "firebase"
   ],
   "skills": "./skills/",
   "interface": {
     "displayName": "AI Agent Skills",
-    "shortDescription": "Agent loops, AI scope QA, and prompt cache diagnostics.",
-    "longDescription": "Design agent loops with explicit triggers, verification, and stop conditions, then bind them to Claude Code, the Claude Agent SDK, Codex CLI, or OpenClaw. Diagnose Claude prompt cache misses with the cache diagnostics beta and a bundled probe script. Build contextual conversation tests for app AI scope boundaries, false refusals, and prompt injection.",
+    "shortDescription": "Agent loops, AI scope QA, prompt cache diagnostics, and Firebase on disposable Google accounts.",
+    "longDescription": "Design agent loops with explicit triggers, verification, and stop conditions, then bind them to Claude Code, the Claude Agent SDK, Codex CLI, or OpenClaw. Diagnose Claude prompt cache misses with the cache diagnostics beta and a bundled probe script. Build contextual conversation tests for app AI scope boundaries, false refusals, and prompt injection. Set up Firebase AI Logic with App Check on a temporary lab Google account without touching permanent projects or billing.",
     "developerName": "Ivanna Kaceviča",
     "websiteURL": "https://happycode.studio"
   }

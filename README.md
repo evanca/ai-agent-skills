@@ -1,6 +1,6 @@
 # AI Agent Skills for Claude Code, Codex, Cursor, Antigravity, and Other AI Coding Agents
 
-**Agent skills your coding agent loads by itself: design agent loops that stop when they should, test an app AI's scope boundaries, and find out why a Claude prompt cache keeps missing.**
+**Agent skills your coding agent loads by itself: design agent loops that stop when they should, test an app AI's scope boundaries, find out why a Claude prompt cache keeps missing, and get Firebase AI Logic running on a disposable Google account.**
 
 A skill is a folder with a `SKILL.md` file. Your agent reads the description, decides a task matches, and pulls in the guidance. You don't paste anything into a rules file or remember to `@`-mention a doc.
 
@@ -32,7 +32,7 @@ This repo is also a plugin marketplace, so agents that support plugins can insta
 /plugin install ai-agent-skills@ai-agent-skills
 ```
 
-Skills then load as `ai-agent-skills:loop-designer`, `ai-agent-skills:cache-diagnostics`, and `ai-agent-skills:ai-scope-qa`.
+Skills then load as `ai-agent-skills:loop-designer`, `ai-agent-skills:cache-diagnostics`, `ai-agent-skills:ai-scope-qa`, and `ai-agent-skills:use-disposable-google-account-for-firebase`.
 
 **Codex** — [plugins](https://developers.openai.com/codex/plugins/build):
 
@@ -65,6 +65,7 @@ Prefer to do it by hand? Copy or symlink any skill folder into your agent's skil
 | [`loop-designer`](./skills/loop-designer) | Automating a recurring task, building a retry-until-green loop, or debugging a loop that stalls or burns tokens |
 | [`cache-diagnostics`](./skills/cache-diagnostics) | Finding out why a Claude prompt cache keeps missing or a turn costs more than expected |
 | [`ai-scope-qa`](./skills/ai-scope-qa) | Testing an app AI's scope boundaries, false refusals, topic drift, or prompt injection |
+| [`use-disposable-google-account-for-firebase`](./skills/use-disposable-google-account-for-firebase) | Testing Firebase on a temporary hackathon, workshop or lab Google account, or setting up AI Logic with App Check on a short-lived project |
 
 ### loop-designer
 
@@ -97,6 +98,12 @@ Builds contextual conversation tests for an app's AI: legitimate tasks, ambiguou
 
 Includes a [prompt checklist](./skills/ai-scope-qa/references/prompt-checklist.md), [case design and evaluation guidance](./skills/ai-scope-qa/references/case-design.md), and [primary references](./skills/ai-scope-qa/references/sources.md). Expectations come from the app's own policy and supported actions.
 
+### use-disposable-google-account-for-firebase
+
+Hackathons and workshops hand out Google accounts with funded Cloud projects that are deleted a few days later. This skill gets a hello world calling Gemini through Firebase AI Logic, with App Check verifying each request, without touching the owner's own projects, billing, or sign-ins.
+
+It covers isolating the lab sign-in, adding Firebase to the assigned project, choosing an AI Logic provider, registering a localhost debug token, and proving with the request path that calls reached the lab project. It also covers switching back and cleaning up before access expires. The setup wizard can spin forever at its App Check step, and the skill shows how to get past it. A [hello world page](./skills/use-disposable-google-account-for-firebase/assets/hello-world.html) needs only a loopback static server.
+
 ## 📚 Sources and credits
 
 Each skill condenses the documentation of the tools it covers. The vendors own that behavior, and their documentation is the authority: where a page and a skill disagree, trust the page. No vendor has reviewed or endorsed this repository.
@@ -106,6 +113,8 @@ Each skill condenses the documentation of the tools it covers. The vendors own t
 **cache-diagnostics** — [Cache diagnostics](https://platform.claude.com/docs/en/build-with-claude/cache-diagnostics) · [Prompt caching](https://platform.claude.com/docs/en/build-with-claude/prompt-caching)
 
 **ai-scope-qa** — [Out-of-scope prediction (Larson et al., 2019)](https://aclanthology.org/D19-1131/) · [CheckList behavioral testing (Ribeiro et al., 2020)](https://aclanthology.org/2020.acl-main.442/) · [Dialogflow CX test cases](https://docs.cloud.google.com/dialogflow/cx/docs/concept/test-case) · [OWASP LLM Prompt Injection Prevention](https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html). See the skill's [source and license record](./skills/ai-scope-qa/references/sources.md).
+
+**use-disposable-google-account-for-firebase** — [Add Firebase to an existing Google Cloud project](https://firebase.google.com/docs/projects/use-firebase-with-existing-cloud-project) · [Firebase AI Logic](https://firebase.google.com/docs/ai-logic/get-started) · [App Check with AI Logic](https://firebase.google.com/docs/ai-logic/app-check) · [App Check debug provider](https://firebase.google.com/docs/app-check/web/debug-provider) · [gcloud configurations](https://cloud.google.com/sdk/docs/configurations)
 
 ## 🛠️ Contributing
 

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<title>Firebase AI Logic hello world</title>
+<pre id="out">Calling Gemini through Firebase AI Logic…</pre>
+<script type="module">
+  // Public web app identifiers from Firebase console → Project settings → General → Your apps.
+  // They are not secrets, but keep a disposable project's values out of shared config.
+  const firebaseConfig = {
+    apiKey: 'REPLACE_WITH_API_KEY',
+    appId: 'REPLACE_WITH_APP_ID',
+    projectId: 'REPLACE_WITH_PROJECT_ID',
+  };
+  // A model the chosen provider currently serves at this location.
+  const MODEL = 'REPLACE_WITH_MODEL';
+
+  // SDK 13+ calls the Vertex AI provider AgentPlatformBackend; 12.x calls it VertexAIBackend.
+  const SDK = 'https://www.gstatic.com/firebasejs/13.3.0';
+  const { initializeApp } = await import(`${SDK}/firebase-app.js`);
+  const { initializeAppCheck, CustomProvider } = await import(`${SDK}/firebase-app-check.js`);
+  const { getAI, getGenerativeModel, AgentPlatformBackend } = await import(`${SDK}/firebase-ai.js`);
+
+  const out = document.getElementById('out');
+  if (!['localhost', '127.0.0.1'].includes(location.hostname)) {
+    out.textContent = 'This page uses the App Check debug provider and only runs on a loopback address.';
+    throw new Error('not loopback');
+  }
+
+  const app = initializeApp(firebaseConfig);
+  // Debug provider: the SDK creates a debug token for this browser profile and origin,
+  // prints it once in DevTools → Console, and exchanges it for App Check tokens.
+  // The provider below is never called in debug mode and loads no reCAPTCHA script.
+  self.FIREBASE_APPCHECK_DEBUG_TOKEN = true;
+  initializeAppCheck(app, {
+    provider: new CustomProvider({ getToken: () => Promise.reject(new Error('debug provider only')) }),
+  });
+
+  // For the Gemini Developer API provider, import GoogleAIBackend and use new GoogleAIBackend().
+  const ai = getAI(app, { backend: new AgentPlatformBackend('global') });
+  const model = getGenerativeModel(ai, { model: MODEL });
+  try {
+    const { response } = await model.generateContent('Reply with exactly: hello world');
+    out.textContent = response.text();
+  } catch (error) {
+    out.textContent = `Request failed: ${error.message}`;
+  }
+</script>
